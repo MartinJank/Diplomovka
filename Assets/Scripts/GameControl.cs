@@ -7,6 +7,7 @@ public class GameControl : MonoBehaviour
     public static GameControl control;
 
     public int exp;
+    public int money;
     private void Awake()
     {
         if (control == null)

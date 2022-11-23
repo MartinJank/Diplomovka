@@ -16,4 +16,13 @@ public class ExperiencePointsHandler : MonoBehaviour
         displayExp.text = "Experience: " + exp;
         anim.Play("Next page");
     }
+
+    public void IncrementMoney()
+    {
+        int money = ++GameControl.control.money;
+        Debug.Log(money);
+        
+        displayExp.text = "Money: " + money;
+    }
+
 }
