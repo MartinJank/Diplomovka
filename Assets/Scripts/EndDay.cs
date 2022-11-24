@@ -9,5 +9,6 @@ public class EndDay : MonoBehaviour
         int money = --GameControl.control.money;
 
         Debug.Log("Money: " + money);
+        GameControl.control.isExhausted = false;
     }
 }

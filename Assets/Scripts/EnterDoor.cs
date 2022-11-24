@@ -24,8 +24,19 @@ public class EnterDoor : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D otherObject) {
         if (otherObject.gameObject.tag == playerTag)
         {
-            Debug.Log("colison");
-            SceneManager.LoadScene(scene);
+
+            if (scene == "Minigame" || scene == "Work") {
+                if (!GameControl.control.isExhausted) {
+                    GameControl.control.isExhausted = true;
+                    SceneManager.LoadScene(scene);
+                }
+            } else {
+                SceneManager.LoadScene(scene);
+            }
+
+            // SceneManager.LoadScene(scene);
+            // Debug.Log("collision");
+            
             // displayExp.text = "Experience: " + GameControl.control.exp;
         }
     }

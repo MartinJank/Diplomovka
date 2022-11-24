@@ -8,6 +8,8 @@ public class GameControl : MonoBehaviour
 
     public int exp;
     public int money;
+    public bool isExhausted;
+
     private void Awake()
     {
         if (control == null)
