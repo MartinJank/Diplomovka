@@ -47,12 +47,12 @@ public class EnterDoor : MonoBehaviour
     }
 
     private void Update()
+    {
+        if (triggerActive && Input.GetKeyDown(KeyCode.Space))
         {
-            if (triggerActive && Input.GetKeyDown(KeyCode.Space))
-            {
-                OpenDoor();
-            }
+            OpenDoor();
         }
+    }
     public void OpenDoor()
     {
         if (scene == "Minigame" || scene == "Work")

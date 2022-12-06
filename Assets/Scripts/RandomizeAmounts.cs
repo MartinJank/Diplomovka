@@ -7,6 +7,7 @@ public class RandomizeAmounts : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI payed;
     [SerializeField] private TextMeshProUGUI price;
+    [SerializeField] private TextMeshProUGUI currentMoney;
     [SerializeField] private TMP_InputField result;
     // Start is called before the first frame update
     private int[] numbers = { 20, 50, 100, 200, 500 };
@@ -35,7 +36,7 @@ public class RandomizeAmounts : MonoBehaviour
         {
             payed.text = "" + payed_amount;
             price.text = "" + price_amount;
-            ++GameControl.control.money;
+            currentMoney.text = "Money: " + ++GameControl.control.money;
         }
 
     }
