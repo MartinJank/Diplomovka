@@ -16,26 +16,26 @@ public class RandomizeAmounts : MonoBehaviour
     {
         int randomIndex = Random.Range(0, 4);
 
-        int payed_amount = numbers[randomIndex];
-        int price_amount = Random.Range(0, payed_amount);
+        int payedAmount = numbers[randomIndex];
+        int priceAmount = Random.Range(0, payedAmount);
 
-        payed.text = "" + payed_amount;
-        price.text = "" + price_amount;
+        payed.text = "" + payedAmount;
+        price.text = "" + priceAmount;
     }
     public void Check()
     {
 
         int randomIndex = Random.Range(0, 4);
 
-        int payed_amount = numbers[randomIndex];
-        int price_amount = Random.Range(0, payed_amount);
+        int payedAmount = numbers[randomIndex];
+        int priceAmount = Random.Range(0, payedAmount);
 
         Debug.Log(int.Parse(result.text));
 
         if (int.Parse(payed.text) - int.Parse(price.text) == int.Parse(result.text))
         {
-            payed.text = "" + payed_amount;
-            price.text = "" + price_amount;
+            payed.text = "" + payedAmount;
+            price.text = "" + priceAmount;
             currentMoney.text = "Money: " + ++GameControl.control.money;
         }
 

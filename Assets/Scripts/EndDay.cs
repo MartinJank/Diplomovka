@@ -44,6 +44,7 @@ public class EndDay : MonoBehaviour
     public void CharacterSleep()
     {
         int money = --GameControl.control.money;
+        ++GameControl.control.day;
 
         Debug.Log("Money: " + money);
         GameControl.control.isExhausted = false;
