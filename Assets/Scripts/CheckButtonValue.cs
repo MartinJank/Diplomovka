@@ -26,7 +26,8 @@ public class CheckButtonValue : MonoBehaviour
         {
             payed.text = "" + payedAmount;
             price.text = "" + priceAmount;
-            currentMoney.text = "Money: " + ++GameControl.control.money;
+            GameControl.control.money += 2;
+            currentMoney.text = "Money: " + GameControl.control.money;
 
             btn1.text = "" + Random.Range(0, int.Parse(payed.text));
             btn2.text = "" + Random.Range(0, int.Parse(payed.text));
@@ -46,6 +47,31 @@ public class CheckButtonValue : MonoBehaviour
                 btn3.text = "" + (int.Parse(payed.text) - int.Parse(price.text));
             }
 
+        } 
+        else
+        {
+            payed.text = "" + payedAmount;
+            price.text = "" + priceAmount;
+            --GameControl.control.money;
+            currentMoney.text = "Money: " + GameControl.control.money;
+
+            btn1.text = "" + Random.Range(0, int.Parse(payed.text));
+            btn2.text = "" + Random.Range(0, int.Parse(payed.text));
+            btn3.text = "" + Random.Range(0, int.Parse(payed.text));
+
+            int randombtn = Random.Range(0, 2);
+            if (randombtn == 0)
+            {
+                btn1.text = "" + (int.Parse(payed.text) - int.Parse(price.text));
+            }
+            if (randombtn == 1)
+            {
+                btn2.text = "" + (int.Parse(payed.text) - int.Parse(price.text));
+            }
+            if (randombtn == 2)
+            {
+                btn3.text = "" + (int.Parse(payed.text) - int.Parse(price.text));
+            }
         }
 
     }

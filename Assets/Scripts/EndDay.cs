@@ -43,10 +43,10 @@ public class EndDay : MonoBehaviour
 
     public void CharacterSleep()
     {
-        int money = --GameControl.control.money;
+        GameControl.control.money -= 10;
         ++GameControl.control.day;
 
-        Debug.Log("Money: " + money);
+        Debug.Log("Money: " + GameControl.control.money);
         GameControl.control.isExhausted = false;
         SceneManager.LoadScene(scene);
 

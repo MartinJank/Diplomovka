@@ -9,12 +9,14 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     [SerializeField] private float speed;
     [SerializeField] private GameObject uiPanel;
+    [SerializeField] private GameObject tiredText;
 
 
     // Start is called before the first frame update
     void Start()
     {
         uiPanel.SetActive(false);
+        tiredText.SetActive(false);
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();

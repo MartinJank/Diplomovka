@@ -39,7 +39,7 @@ public class EnterDoor : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D otherObject) {
-        if (otherObject.CompareTag("Player"))
+        if (otherObject.CompareTag(playerTag))
         {
             triggerActive = false;
             uiPanel.SetActive(false);
