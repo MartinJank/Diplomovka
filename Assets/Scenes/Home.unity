@@ -628,6 +628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Money counter
       objectReference: {fileID: 0}
+    - target: {fileID: 1988652751922268206, guid: 6cd2194513ccd404e9a3ccedd65aa398, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cd2194513ccd404e9a3ccedd65aa398, type: 3}
 --- !u!224 &885423640 stripped
@@ -9032,6 +9036,10 @@ PrefabInstance:
     - target: {fileID: 4923423735538037154, guid: 14726a7101522a145bc63347a6c7f680, type: 3}
       propertyPath: m_Name
       value: Day counter
+      objectReference: {fileID: 0}
+    - target: {fileID: 4923423735538037154, guid: 14726a7101522a145bc63347a6c7f680, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4923423735538037155, guid: 14726a7101522a145bc63347a6c7f680, type: 3}
       propertyPath: m_Pivot.x
