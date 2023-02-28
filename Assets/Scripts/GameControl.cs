@@ -10,6 +10,7 @@ public class GameControl : MonoBehaviour
     public int money;
     public int day;
     public bool isExhausted;
+    public bool homeSceneFirstLoad;
 
     private void Awake()
     {
