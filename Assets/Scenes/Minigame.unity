@@ -1823,7 +1823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3166522253476465734, guid: 10792b4a30ef93e44867efccf5a7179d, type: 3}
       propertyPath: scene
-      value: Crossroad
+      value: Street
       objectReference: {fileID: 0}
     - target: {fileID: 3166522253476465735, guid: 10792b4a30ef93e44867efccf5a7179d, type: 3}
       propertyPath: m_RootOrder

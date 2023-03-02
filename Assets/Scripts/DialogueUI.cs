@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueUI : MonoBehaviour
 {
@@ -17,14 +18,17 @@ public class DialogueUI : MonoBehaviour
    private TypewriterEffect typewriterEffect;
 
    private void Start() {
-        if (GameControl.control.homeSceneFirstLoad)
+        Scene currentScene = SceneManager.GetActiveScene ();
+        string sceneName = currentScene.name;
+
+        if (!GameControl.control.loadedScenes.Contains(sceneName))
         {
             Time.timeScale = 0;
             typewriterEffect = GetComponent<TypewriterEffect>();
             CloseDialogueBox();
             ShowDialogue(testDialogue);
             nextButton.onClick.AddListener(SwitchToTrue);
-            GameControl.control.homeSceneFirstLoad = false;
+            GameControl.control.loadedScenes.Add(sceneName);
         } else {
             CloseDialogueBox();
         }
