@@ -7,18 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class DialogueUI : MonoBehaviour
 {
-   [SerializeField] private GameObject dialogueBox;
-   [SerializeField] private TMP_Text textLabel;
-   [SerializeField] private DialogueObject testDialogue;
-   [SerializeField] private Button nextButton;
+    [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private TMP_Text textLabel;
+    [SerializeField] private DialogueObject testDialogue;
+    [SerializeField] private Button nextButton;
 
-   private bool goNext = false;
+    private bool goNext = false;
 
 
-   private TypewriterEffect typewriterEffect;
+    private TypewriterEffect typewriterEffect;
 
-   private void Start() {
-        Scene currentScene = SceneManager.GetActiveScene ();
+    private void Start()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
         if (!GameControl.control.loadedScenes.Contains(sceneName))
@@ -29,19 +30,24 @@ public class DialogueUI : MonoBehaviour
             ShowDialogue(testDialogue);
             nextButton.onClick.AddListener(SwitchToTrue);
             GameControl.control.loadedScenes.Add(sceneName);
-        } else {
+        }
+        else
+        {
             CloseDialogueBox();
         }
-   }
+    }
 
-   void SwitchToTrue() {
+    void SwitchToTrue()
+    {
         goNext = true;
-   }
-   public void ShowDialogue(DialogueObject dialogueObject) {
+    }
+    public void ShowDialogue(DialogueObject dialogueObject)
+    {
         dialogueBox.SetActive(true);
         StartCoroutine(StepThroughDialogue(dialogueObject));
-   }
-   private IEnumerator StepThroughDialogue(DialogueObject dialogueObject) {
+    }
+    private IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
+    {
 
         foreach (string dialogue in dialogueObject.Dialogue)
         {
@@ -52,9 +58,10 @@ public class DialogueUI : MonoBehaviour
 
         CloseDialogueBox();
         Time.timeScale = 1;
-   }
+    }
 
-    private void CloseDialogueBox() {
+    private void CloseDialogueBox()
+    {
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
     }
