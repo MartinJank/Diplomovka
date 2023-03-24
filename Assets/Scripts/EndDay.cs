@@ -39,18 +39,18 @@ public class EndDay : MonoBehaviour
     {
         if (triggerActive && Input.GetKeyDown(KeyCode.Space))
         {
-            CharacterSleep();
-            // int randTemp = Random.Range(0, 2);
-            // if (randTemp == 1)
-            // {
-            //     Time.timeScale = 0;
-            //     typewriterEffect = GetComponent<TypewriterEffect>();
-            //     CloseDialogueBox();
-            //     ShowDialogue(testDialogue);
-            //     nextButton.onClick.AddListener(SwitchToTrue);
-            // } else {
-            //     CloseDialogueBox();
-            // }
+            int randTemp = Random.Range(0, 2);
+            if (randTemp == 1)
+            {
+                Time.timeScale = 0;
+                typewriterEffect = GetComponent<TypewriterEffect>();
+                CloseDialogueBox();
+                ShowDialogue(testDialogue);
+                nextButton.onClick.AddListener(SwitchToTrue);
+            } else {
+                CloseDialogueBox();
+                CharacterSleep();
+            }
         }
     }
 
@@ -89,16 +89,26 @@ public class EndDay : MonoBehaviour
    }
    private IEnumerator StepThroughDialogue(DialogueObject dialogueObject) {
 
-        foreach (string dialogue in dialogueObject.Dialogue)
-        {
-            yield return typewriterEffect.Run(dialogue, textLabel);
-            yield return new WaitUntil(() => goNext);
-            goNext = false;
-        }
+        int tempLen = Random.Range(0, dialogueObject.Dialogue.Length);
+        Debug.Log("dia" + dialogueObject.Dialogue.Length);
+
+        yield return typewriterEffect.Run(dialogueObject.Dialogue[tempLen], textLabel);
+        yield return new WaitUntil(() => goNext);
+        goNext = false;
+
+        // foreach (string dialogue in dialogueObject.Dialogue)
+        // {
+        //     Debug.Log("HEER2");
+        //     yield return typewriterEffect.Run(dialogue, textLabel);
+        //     yield return new WaitUntil(() => goNext);
+        //     goNext = false;
+        // }
+
+
 
         CloseDialogueBox();
         Time.timeScale = 1;
-        Debug.Log("HEER2");
+        CharacterSleep();
    }
 
     private void CloseDialogueBox() {

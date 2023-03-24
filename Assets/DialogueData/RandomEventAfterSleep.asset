@@ -13,4 +13,10 @@ MonoBehaviour:
   m_Name: RandomEventAfterSleep
   m_EditorClassIdentifier: 
   dialogue:
-  - 'Random event: -10'
+  - "Bol\xED \u0165a zub, mus\xED\u0161 nav\u0161t\xEDvi\u0165 zub\xE1ra\n\nStrata:
+    20"
+  - 'Pokazil sa ti monitor:
+
+
+    Strata: 50'
+  - "Veterin\xE1r pre ma\u010Dku:\n\nStrata: 20"
