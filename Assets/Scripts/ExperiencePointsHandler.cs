@@ -11,6 +11,10 @@ public class ExperiencePointsHandler : MonoBehaviour
     public void Increment()
     {
         int exp = ++GameControl.control.exp;
+        if (GameControl.control.exp % 50 == 0)
+        {
+            GameControl.control.levelOfEarning++;
+        }
         Debug.Log(exp);
         
         displayExp.text = "Experience: " + exp;

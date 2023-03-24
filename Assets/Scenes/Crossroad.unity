@@ -8824,7 +8824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4465291130091668670, guid: 9dbaa2bea7d10064a83b1d4651f3fcb7, type: 3}
       propertyPath: scene
-      value: Work
+      value: Minigame 1
       objectReference: {fileID: 0}
     - target: {fileID: 4465291130091668670, guid: 9dbaa2bea7d10064a83b1d4651f3fcb7, type: 3}
       propertyPath: uiPanel

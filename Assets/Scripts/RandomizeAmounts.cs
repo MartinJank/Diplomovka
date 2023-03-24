@@ -36,7 +36,7 @@ public class RandomizeAmounts : MonoBehaviour
         {
             payed.text = "" + payedAmount;
             price.text = "" + priceAmount;
-            currentMoney.text = "Money: " + ++GameControl.control.money;
+            currentMoney.text = "Money: " + ++GameControl.control.money + GameControl.control.levelOfEarning;
         }
 
     }

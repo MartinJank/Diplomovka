@@ -10,6 +10,7 @@ public class GameControl : MonoBehaviour
     public int money;
     public int day;
     public bool isExhausted;
+    public int levelOfEarning;
     public List<string> loadedScenes = new List<string>();
     
 

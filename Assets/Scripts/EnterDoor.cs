@@ -55,7 +55,7 @@ public class EnterDoor : MonoBehaviour
     }
     public void OpenDoor()
     {
-        if (scene == "Minigame" || scene == "Work")
+        if (scene == "Minigame" || scene == "Work" || scene == "Minigame 1")
         {
             if (!GameControl.control.isExhausted)
             {

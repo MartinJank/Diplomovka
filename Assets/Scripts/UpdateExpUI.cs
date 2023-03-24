@@ -11,4 +11,9 @@ public class UpdateExpUI : MonoBehaviour
         int exp = GameControl.control.exp;
         displayExp.text = "Experience: " + exp;
     }
+
+    private void Update() {
+        int exp = GameControl.control.exp;
+        displayExp.text = "Experience: " + exp;
+    }
 }
