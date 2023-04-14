@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SpawnObjectsInsideMinigame : MonoBehaviour
 {
-    public GameObject objectToSpawn; 
-    public Vector3 minPosition; 
-    public Vector3 maxPosition; 
+    public GameObject objectToSpawn;
+    public Vector3 minPosition;
+    public Vector3 maxPosition;
     public float interval = 2;
     float timer;
     // void Start() 
@@ -23,14 +23,14 @@ public class SpawnObjectsInsideMinigame : MonoBehaviour
         //     // Debug.Log("Cube");
         //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         //     RaycastHit hit;
-     
+
         //     if(Physics.Raycast(ray, out hit, 100.0f) && hit.transform.gameObject != null) {
         //         Debug.DrawRay (ray.origin, hit.point);
         //         Debug.Log(hit.transform.name);
-     
+
         //         Destroy(GameObject.Find("Square(Clone)"));
         //     }
-                    
+
         // }
 
         timer += Time.deltaTime;
@@ -42,12 +42,16 @@ public class SpawnObjectsInsideMinigame : MonoBehaviour
                 Random.Range(minPosition.z, maxPosition.z)
             );
             GameObject go = Instantiate(objectToSpawn, randomPosition, Quaternion.identity);
+            Vector3 euler = go.transform.eulerAngles;
+            euler.z = Random.Range(0f, 360f);
+            go.transform.eulerAngles = euler;
             Destroy(go, 3);
             timer -= interval;
         }
     }
 
-    private void OnMouseDown() {
+    private void OnMouseDown()
+    {
         Destroy(gameObject);
     }
 }

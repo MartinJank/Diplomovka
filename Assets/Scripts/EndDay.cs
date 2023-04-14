@@ -12,8 +12,9 @@ public class EndDay : MonoBehaviour
     [SerializeField] private GameObject uiPanel;
     [SerializeField] private string scene;
 
-    private void OnTriggerEnter2D(Collider2D otherObject) {
-        
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+
         // int money = --GameControl.control.money;
 
         // Debug.Log("Money: " + money);
@@ -26,7 +27,8 @@ public class EndDay : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D otherObject) {
+    private void OnTriggerExit2D(Collider2D otherObject)
+    {
 
         if (otherObject.CompareTag(playerTag))
         {
@@ -39,7 +41,7 @@ public class EndDay : MonoBehaviour
     {
         if (triggerActive && Input.GetKeyDown(KeyCode.Space))
         {
-            int randTemp = Random.Range(0, 2);
+            int randTemp = Random.Range(0, 3);
             if (randTemp == 1)
             {
                 Time.timeScale = 0;
@@ -47,10 +49,17 @@ public class EndDay : MonoBehaviour
                 CloseDialogueBox();
                 ShowDialogue(testDialogue);
                 nextButton.onClick.AddListener(SwitchToTrue);
-            } else {
+            }
+            else
+            {
                 CloseDialogueBox();
                 CharacterSleep();
             }
+        }
+
+        if (GameControl.control.day >= 20)
+        {
+            SceneManager.LoadScene("WinScreen");
         }
     }
 
@@ -69,25 +78,28 @@ public class EndDay : MonoBehaviour
 
 
 
-   [SerializeField] private GameObject dialogueBox;
-   [SerializeField] private TMP_Text textLabel;
-   [SerializeField] private DialogueObject testDialogue;
-   [SerializeField] private Button nextButton;
+    [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private TMP_Text textLabel;
+    [SerializeField] private DialogueObject testDialogue;
+    [SerializeField] private Button nextButton;
 
-   private bool goNext = false;
+    private bool goNext = false;
 
 
-   private TypewriterEffect typewriterEffect;
+    private TypewriterEffect typewriterEffect;
 
-   void SwitchToTrue() {
+    void SwitchToTrue()
+    {
         goNext = true;
-   }
-   public void ShowDialogue(DialogueObject dialogueObject) {
+    }
+    public void ShowDialogue(DialogueObject dialogueObject)
+    {
         dialogueBox.SetActive(true);
         Debug.Log("HEER1");
         StartCoroutine(StepThroughDialogue(dialogueObject));
-   }
-   private IEnumerator StepThroughDialogue(DialogueObject dialogueObject) {
+    }
+    private IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
+    {
 
         int tempLen = Random.Range(0, dialogueObject.Dialogue.Length);
         Debug.Log("dia" + dialogueObject.Dialogue.Length);
@@ -104,14 +116,18 @@ public class EndDay : MonoBehaviour
         //     goNext = false;
         // }
 
-
+        string s1 = dialogueObject.Dialogue[tempLen];
+        int s2 = System.Int32.Parse(s1.Substring(s1.Length - 2));
+        Debug.Log("cena: " + s2);
+        GameControl.control.money -= s2;
 
         CloseDialogueBox();
         Time.timeScale = 1;
         CharacterSleep();
-   }
+    }
 
-    private void CloseDialogueBox() {
+    private void CloseDialogueBox()
+    {
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
     }
