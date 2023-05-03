@@ -27,6 +27,7 @@ public class CheckButtonValue : MonoBehaviour
             payed.text = "" + payedAmount;
             price.text = "" + priceAmount;
             GameControl.control.money += 2;
+            GameControl.control.money += GameControl.control.levelOfEarning;
             currentMoney.text = "Money: " + GameControl.control.money;
 
             btn1.text = "" + Random.Range(0, int.Parse(payed.text));

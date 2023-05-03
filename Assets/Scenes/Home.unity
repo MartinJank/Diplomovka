@@ -5044,6 +5044,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1694597281076637808, guid: 0228934d8b8ea1f47818190b0699bf71, type: 3}
+      propertyPath: levelOfEarning
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694597281076637808, guid: 0228934d8b8ea1f47818190b0699bf71, type: 3}
       propertyPath: homeSceneFirstLoad
       value: 1
       objectReference: {fileID: 0}
