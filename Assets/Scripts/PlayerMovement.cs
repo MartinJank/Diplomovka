@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private GameObject uiPanel;
     [SerializeField] private GameObject tiredText;
+    private AudioSource walkSound;
 
 
     // Start is called before the first frame update
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        walkSound = gameObject.GetComponent<AudioSource>();
+        InvokeRepeating ("PlaySound", 0.0f, 0.33f); 
     }
 
     // Update is called once per frame
@@ -32,6 +35,14 @@ public class PlayerMovement : MonoBehaviour
         UpdateAnimation(dirX);
 
     }
+
+    void PlaySound () {
+        if (Input.GetButton("Horizontal") ){
+            walkSound.Play();
+        }
+    }
+
+
     private void UpdateAnimation(float dirX)
     {
         if (dirX > 0f) 
