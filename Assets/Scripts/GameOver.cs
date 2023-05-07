@@ -4,19 +4,10 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void Quit()
     {
-        if (GameControl.control.money <= 0) {
-            Debug.Log("OVER");
-            Application.Quit();
-        }
+        Application.Quit();
         
     }
 }

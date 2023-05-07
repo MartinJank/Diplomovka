@@ -181,8 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Gratulujem\nDosiahol si de\u0148 20\nPodarilo sa ti pre\u017Ei\u0165 s
-    plusov\xFDmi hodnotami"
+  m_text: "Je mi \u013E\xFAto\nNepodarilo sa ti ud\u017Ea\u0165 si plusov\xE9 konto"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -355,6 +354,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1638301758}
+        m_TargetAssemblyTypeName: MakeEverytingZero, Assembly-CSharp
+        m_MethodName: MakeZero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &274727896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,9 +499,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9614844363374d54184466721329e6ab, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fdb88826efa17054b88df58f104013f6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -640,10 +651,27 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3166522253476465734, guid: 10792b4a30ef93e44867efccf5a7179d, type: 3}
   m_PrefabInstance: {fileID: 1638301755}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1638301757}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f813a5ad507c09e4eb4a79dcfce29e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1638301757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3166522253476465733, guid: 10792b4a30ef93e44867efccf5a7179d, type: 3}
+  m_PrefabInstance: {fileID: 1638301755}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1638301758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638301757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1215cd5371f3a1a49abe24ac62dd2d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1681812078
@@ -1022,7 +1050,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079392195}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdb4f0863e214434daa5bbfbe959106d, type: 3}
   m_Name: 
@@ -1030,4 +1058,4 @@ MonoBehaviour:
   objectToSpawn: {fileID: 499213783314194867, guid: 049c52e8fe1913940ae5b4a59698a6e0, type: 3}
   minPosition: {x: -8, y: 6, z: 0}
   maxPosition: {x: 8, y: 12, z: 0}
-  interval: 0.3
+  interval: 0.5

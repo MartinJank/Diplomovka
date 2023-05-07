@@ -286,7 +286,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 316971656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1830456286}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &316971656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,10 +1507,27 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3166522253476465734, guid: 10792b4a30ef93e44867efccf5a7179d, type: 3}
   m_PrefabInstance: {fileID: 1830456283}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1830456285}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f813a5ad507c09e4eb4a79dcfce29e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1830456285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3166522253476465733, guid: 10792b4a30ef93e44867efccf5a7179d, type: 3}
+  m_PrefabInstance: {fileID: 1830456283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1830456286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830456285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e91bb03c10bea048a574d0f6e51d5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2035774803

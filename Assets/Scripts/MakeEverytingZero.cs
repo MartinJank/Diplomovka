@@ -10,5 +10,6 @@ public class MakeEverytingZero : MonoBehaviour
         GameControl.control.day = 1;
         GameControl.control.money = 100;
         GameControl.control.exp = 5;
+        GameControl.control.loadedScenes.Clear();
     }
 }

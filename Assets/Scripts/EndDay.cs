@@ -61,6 +61,11 @@ public class EndDay : MonoBehaviour
         {
             SceneManager.LoadScene("WinScreen");
         }
+        if (GameControl.control.money < 0)
+        {
+            
+            SceneManager.LoadScene("LooseScreen");
+        }
     }
 
     public void CharacterSleep()

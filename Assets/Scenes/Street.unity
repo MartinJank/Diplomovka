@@ -14712,7 +14712,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You are too tired for another activity. '
+  m_text: "Si vy\u010Derpan\xFD na to aby si zvl\xE1dol \u010Fal\u0161iu aktivitu."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14746,7 +14746,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -28739,20 +28739,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 1616013517}
     m_Modifications:
     - target: {fileID: 1942407268627075715, guid: e2843d1d48a99df4bb6e0972c22cbaaf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942407268627075715, guid: e2843d1d48a99df4bb6e0972c22cbaaf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942407268627075715, guid: e2843d1d48a99df4bb6e0972c22cbaaf, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942407268627075715, guid: e2843d1d48a99df4bb6e0972c22cbaaf, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942407268627075715, guid: e2843d1d48a99df4bb6e0972c22cbaaf, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1245.6152
+      value: 6362.3633
       objectReference: {fileID: 0}
     - target: {fileID: 1942407268627075715, guid: e2843d1d48a99df4bb6e0972c22cbaaf, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 808.9932
+      value: 2939.0488
       objectReference: {fileID: 0}
     - target: {fileID: 1942407268627075715, guid: e2843d1d48a99df4bb6e0972c22cbaaf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 28.7645
+      value: 409.90845
       objectReference: {fileID: 0}
     - target: {fileID: 1942407268627075715, guid: e2843d1d48a99df4bb6e0972c22cbaaf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -47.0397
+      value: 128.51538
       objectReference: {fileID: 0}
     - target: {fileID: 1942407269427937810, guid: e2843d1d48a99df4bb6e0972c22cbaaf, type: 3}
       propertyPath: m_Name

@@ -41,13 +41,17 @@ public class OpenPC : MonoBehaviour
     public void OpenPCdialogue()
     {
         text.SetActive(true);
-        if (GameControl.control.money < 40)
+        if (GameControl.control.money < 50)
         {
-            label.text = "Risk skrachovania: vysoký";
+            label.text = "POZOR! Vysoký risk skrachovania!\nOdporúča sa navštíviť prácu.";
+        }
+        else if (GameControl.control.money >= 50 && GameControl.control.money < 100)
+        {
+            label.text = "Risk skrachovania: Stredný\nOdporúča sa navštíviť prácu.";
         }
         else
         {
-            label.text = "Risk skrachovania: nízky";
+            label.text = "Risk skrachovania: nízky\nOdporúča sa navštíviť školu.";
         }
 
     }
