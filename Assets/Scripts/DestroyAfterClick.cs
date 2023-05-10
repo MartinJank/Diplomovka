@@ -8,7 +8,7 @@ public class DestroyAfterClick : MonoBehaviour
 
         if (gameObject.tag == "Corr")
         {
-            GameControl.control.exp++;
+            GameControl.control.exp += 2;
             if (GameControl.control.exp % 50 == 0)
             {
                 GameControl.control.levelOfEarning++;

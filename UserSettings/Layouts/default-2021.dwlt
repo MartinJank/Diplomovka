@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1680
     height: 959
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 73
+  controlID: 36
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 74
+  controlID: 42
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 53
+  controlID: 25
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 1011
     height: 661
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -380,9 +380,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4e6e0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5aacffff5cacffff98adffff3eb1ffff7ab2ffff5eb3ffff12b4ffffcab4ffffc6b5ffff82b6ffffa2b7ffff58b8ffff60b9ffffeabcffffeec3ffffecc8ffff14caffff5acbffffcaccffff34ceffffecceffffa0cfffff66d4ffff68d4fffff0d6ffff0ed7ffffa2d9ffff04daffff32e1ffff34e1ffff2ae5ffff8ce5ffff02e8ffff20e8ffff6ee9ffff70e9ffffbcf7ffff16faffffb6890000ec8c0000b28e0000369100004c9100007a910000ce920000c2bd0000aabf000022c0000084c000007ac3000090c40000aac4000014c6000092c700000cca0000b8cb00000cce0000ead70000fed700001cd80000d0d800000ed9000044dd0000
+      m_ExpandedIDs: b495ffff5a96ffffa898ffffb498ffff2299ffff7899ffffa299ffff2a9affff989affffe29afffffa9affff5e9cffff849ffffff6a6ffff40abffff1ab0ffff4cb2ffff6ab2ffffb2b7ffff48baffff66baffffb4bbffffeebfffff22c3ffff40c3ffff38c6ffff9ac6ffff0ec9ffff92ceffff96d0fffff8d0ffff3cd3ffff5ad3ffff1edaffffd8defffff6deffffe0e0ffffe2e0ffff24e2ffffbae3ffff5ee6ffffa0e9ffff72eeffff38f2ffffecf3ffff72f5ffff5af6ffff9cf7ffff16fafffff4ffffffd8ba00004ac400007cc500002ad50000e0d700009ee9000036ed000098ed0000aef600003c010100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -686,9 +686,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 462.40692, y: 278.1971, z: -3.0341675}
+    m_Target: {x: 473.81958, y: 245.8456, z: 1.1998564}
     speed: 2
-    m_Value: {x: 462.40692, y: 278.1971, z: -3.0341675}
+    m_Value: {x: 473.81958, y: 245.8456, z: 1.1998564}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -739,9 +739,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 438.58807
+    m_Target: 458.9582
     speed: 2
-    m_Value: 438.58807
+    m_Value: 458.9582
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1048,21 +1048,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/DialogueData
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/DialogueData
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\UnityProjects\Diplomovka
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 1c880000
-    m_LastClickedID: 34844
+    scrollPos: {x: 0, y: 240}
+    m_SelectedIDs: 24880000
+    m_LastClickedID: 34852
     m_ExpandedIDs: 00000000c0870000c2870000c4870000c6870000c8870000ca870000cc870000ce870000d0870000d2870000d4870000d6870000d8870000da870000dc870000de870000e0870000e2870000e4870000e6870000e8870000ea870000ec870000ee87000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
