@@ -10,7 +10,8 @@ public class MakeEverytingZero : MonoBehaviour
         GameControl.control.day = 1;
         GameControl.control.money = 100;
         GameControl.control.exp = 5;
-        // GameControl.control.level = 5;
+        GameControl.control.levelOfEarning = 0;
+        GameControl.control.isExhausted = false;
         GameControl.control.exp = 5;
         GameControl.control.loadedScenes.Clear();
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject uiPanel;
     [SerializeField] private GameObject tiredText;
     private AudioSource walkSound;
+    float dirX = 0;
 
 
     // Start is called before the first frame update
@@ -28,11 +30,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float dirX = Input.GetAxisRaw("Horizontal");
+        
+        dirX = Input.GetAxisRaw("Horizontal");
         
         rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
 
-        UpdateAnimation(dirX);
+        UpdateAnimation();
 
     }
 
@@ -43,7 +46,17 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void UpdateAnimation(float dirX)
+    // public void goLeft() {
+    //     dirX = -1;
+    //     Debug.Log("hello");
+    // }
+
+    // public void goRight() {
+    //     dirX = 1;
+    // }
+
+
+    private void UpdateAnimation()
     {
         if (dirX > 0f) 
         {

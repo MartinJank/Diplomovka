@@ -70,12 +70,14 @@ public class EndDay : MonoBehaviour
 
     public void CharacterSleep()
     {
-        GameControl.control.money -= 20;
-        ++GameControl.control.day;
+        if (triggerActive) {
+            GameControl.control.money -= 20;
+            ++GameControl.control.day;
 
-        Debug.Log("Money: " + GameControl.control.money);
-        GameControl.control.isExhausted = false;
-        SceneManager.LoadScene(scene);
+            Debug.Log("Money: " + GameControl.control.money);
+            GameControl.control.isExhausted = false;
+            SceneManager.LoadScene(scene);
+        }
 
     }
 

@@ -55,18 +55,21 @@ public class EnterDoor : MonoBehaviour
     }
     public void OpenDoor()
     {
-        if (scene == "Minigame" || scene == "Work" || scene == "Minigame 1")
-        {
-            if (!GameControl.control.isExhausted)
+        if (triggerActive) {
+            if (scene == "Minigame" || scene == "Work" || scene == "Minigame 1")
             {
-                GameControl.control.isExhausted = true;
+                if (!GameControl.control.isExhausted)
+                {
+                    GameControl.control.isExhausted = true;
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
                 SceneManager.LoadScene(scene);
             }
         }
-        else
-        {
-            SceneManager.LoadScene(scene);
-        }
+        
     }
 
 }
